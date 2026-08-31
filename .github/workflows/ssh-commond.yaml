@@ -76,6 +76,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest@v4
         with:
-          subject-name: index.docker.io/kisn07/kishh
+          subject-name: index.docker.io/kisan07/kishh
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
