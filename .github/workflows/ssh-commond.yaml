@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: 
-            docker stop kishh 
-            docker rm kishh
-            docker build -t kishh .
-            docker run --name kishh -d -p 9000:9000 kishh
+              docker stop kishh || true
+              docker rm kishh || true
+              docker build -t kishh .
+              docker run --name kishh -d -p 9000:9000 kishh
