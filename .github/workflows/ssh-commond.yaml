@@ -65,7 +65,7 @@ jobs:
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
-build:
+  build:
     name: deploy
     runs-on: ubuntu-latest
     steps:
