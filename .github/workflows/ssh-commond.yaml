@@ -15,4 +15,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
+          script: 
+            docker stop kishh 
+            docker rm kishh
+            docker build -t kishh .
+            docker run --name kishh -d -p 9000:9000 kishh
