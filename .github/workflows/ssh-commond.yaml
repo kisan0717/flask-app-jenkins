@@ -64,11 +64,7 @@ jobs:
           subject-name: index.docker.io/kisan07/kishh
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
-
-  build:
-    name: deploy
-    runs-on: ubuntu-latest
-    steps:
+          
       - name: Execute remote SSH commands using password
         uses: appleboy/ssh-action@v1
         with:
